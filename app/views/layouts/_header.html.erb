@@ -9,9 +9,17 @@
             <li class="nav-item">
             <%= link_to "Home", root_path, class: "nav-link pr-5" %>
             </li>
+
+            <% if logged_in? %>
+            <%= link_to "Logout", logout_path, method: "delete", class: "nav-link pr-5"  %>
+    
+            <% else %>
+
             <li class="nav-item">
-            <%= link_to "Login", '#', class: "nav-link pr-5" %>  
+            <%= link_to "Login", login_path, class: "nav-link pr-5" %>  
             </li>   
+
+            <% end %>
         </ul>
         </div>  
     </nav>
