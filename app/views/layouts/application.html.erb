@@ -18,8 +18,13 @@
 </head>
 <body>
   <%= render 'layouts/header' %>
+  <div class="container">
   <div class="margin_top">
-    <%= yield %>
+      
+        <%= render 'shared/flash_messages' %>
+      
+      <%= yield %>
+    </div>
   </div>
   <%= render 'layouts/footer' %>
 </body>
