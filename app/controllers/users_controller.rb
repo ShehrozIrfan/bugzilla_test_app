@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to Bugzilla App!"
-      redirect_to @user
+      redirect_to root_path
     else
       render 'new'
     end
@@ -22,6 +22,6 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:name,:email,:password,:password_confirmation)
+      params.require(:user).permit(:name,:email,:password,:password_confirmation,:role)
     end
 end
