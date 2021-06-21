@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'session#destroy'
   get '/signup',to: 'users#new'
   resources :users
+  resources :account_activations, only: [:edit]
   root 'static_pages#home'
   
 
