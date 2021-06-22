@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   root 'static_pages#home'
   
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+  
 
 end
