@@ -50,8 +50,8 @@ Rails.application.configure do
   # when problems arise.
   config.log_level = :debug
 
+  config.action_mailer.default_url_options = { :host => 'https://git.heroku.com/calm-atoll-67456.heroku.com' }
 
-  config.action_mailer.default_url_options = { :host => "www.https://heroku.com" }
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
