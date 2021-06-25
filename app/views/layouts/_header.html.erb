@@ -11,8 +11,27 @@
             </li>
 
             <% if logged_in? %>
-            <%= link_to "Logout", logout_path, method: "delete", class: "nav-link pr-5"  %>
+
+            <% if current_user.role == 0 %>
+                <%= link_to "Roles", change_role_path, class: "nav-link pr-5" %>
+            <% end %>
+            
+            <% if current_user.role == 0 or current_user.role == 1 %>
+            <li class="nav-item">
+            <%= link_to "Create Bug", new_bug_path, class: "nav-link pr-5" %>
+            </li>
+            <% end %>
+
     
+            <li class="nav-item">
+            <%= link_to "Show Bugs", bugs_path, class: "nav-link pr-5" %>
+            </li>
+            
+
+            <li class="nav-item">
+            <%= link_to "Logout", logout_path, method: "delete", class: "nav-link pr-5"  %>
+            </li>
+            
             <% else %>
 
             <li class="nav-item">
