@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_user, except: [:new]
+  # before_action :require_user, except: [:new]
   before_action :require_same_user
 
   def new
@@ -21,14 +21,14 @@ class UsersController < ApplicationController
     end
   end
 
-  
+
   def change_role
-    @users_all = User.all 
+    @users_all = User.all
   end
-  
-  def edit 
+
+  def edit
     @user = User.find(params[:id])
-    @users_all = User.all 
+    @users_all = User.all
     @users = []
     @users_all.each do |u|
       if u.role == 1 or u.role == 2
