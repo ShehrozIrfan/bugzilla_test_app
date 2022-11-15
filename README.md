@@ -1,10 +1,10 @@
 # Bugzilla Test App
 
-In this project you are going to create a bug management system named bugzilla. There will be
-multiple roles for a user like Manager, QA and Developer. For this project you will have to create
+In this project you are going to create a bug management system named `Bugzilla`. There will be
+multiple `roles` for a user like `Manager`, `QA` and `Developer`. For this project you will have to create
 a ruby on rails app and use all the rails standard practices that you have just learnt. You can use
 any gems or package that you need in order to complete the project. On the front end the pages
-should be responsive and use bootstrap or any similar libraries that can help with it.
+should be responsive and use `bootstrap` or any similar libraries that can help with it.
 For any user role there should be these features:
 
 * A user should be able to sign up and there should be appropriate validation on the sign
@@ -18,7 +18,7 @@ up form like email should be unique and some basic validation on password.
 
 * A user should be able to sign out of the system.
 
-# Manager
+### Manager
 
 * A manager can create bugs.
 
@@ -32,7 +32,7 @@ up form like email should be unique and some basic validation on password.
 
 * A manager can change the role of any QA and Developer.
 
-# QA
+### QA
 
 * A QA can create bugs.
 
@@ -42,7 +42,7 @@ up form like email should be unique and some basic validation on password.
 
 * A QA can see the comments added in the bug.
 
-# Developer
+### Developer
 
 * A Developer can see a list of all the bugs that are assigned to him/her.
 
@@ -52,7 +52,7 @@ up form like email should be unique and some basic validation on password.
 
 * A Developer can add comments in the bug.
 
-# Bug
+### Bug
 
 Bugs must have following fields:
 
